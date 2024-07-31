@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvHasil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -25,7 +26,7 @@
         app:layout_constraintVertical_bias="0.003" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/etBil_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -35,7 +36,7 @@
         android:inputType="numberDecimal" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/etBil_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -45,17 +46,18 @@
         android:inputType="numberDecimal" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnJumlah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="#4CAF50"
+        android:onClick="btnJumlah"
         android:text="PENJUMLAHAN" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnKurang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -65,7 +67,7 @@
         android:text="PENGURANGAN" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnKali"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -75,7 +77,7 @@
         android:text="PERKALIAN" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnBagi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
