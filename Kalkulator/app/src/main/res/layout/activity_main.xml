@@ -17,7 +17,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:text="0"
-        android:textSize="100sp"
+        android:textSize="80sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -64,6 +64,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="#8BC34A"
+        android:onClick="btnKurang"
         android:text="PENGURANGAN" />
 
     <Button
@@ -74,6 +75,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="#03A9F4"
+        android:onClick="btnKali"
         android:text="PERKALIAN" />
 
     <Button
@@ -83,6 +85,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
+        android:onClick="btnBagi"
         android:text="PEMBAGIAN" />
 
 </LinearLayout>
