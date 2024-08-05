@@ -55,13 +55,13 @@ public class MainActivity extends AppCompatActivity {
             cToF();
         }
             if (pilihan.equals("Celcius To Kelvin")) {
-            cToF();
+            cToK();
         }
             if (pilihan.equals("Reamur To Celcius")) {
-            cToF();
+            rToC();
         }
             if (pilihan.equals("Reamur To Fahrenheit")) {
-            cToF();
+            rToF();
         }
 
     }
@@ -70,7 +70,28 @@ public class MainActivity extends AppCompatActivity {
         double hasil =(4.0/5.0) * suhu;
         tvHasil.setText(hasil +"");
     }
-    public void cToF(){
+    public void cToF () {
+        double suhu = Double.parseDouble(etNilai.getText().toString());
+        double hasil =(suhu * 9.0/5.0) + 32;
+        tvHasil.setText(hasil +"");
+    }
+    public void cToK () {
+        double suhu = Double.parseDouble(etNilai.getText().toString());
+        double hasil =(suhu + 273);
+        tvHasil.setText(hasil +"");
+    }
+    public void rToC () {
+        double suhu = Double.parseDouble(etNilai.getText().toString());
+        double hasil =(suhu * 5.0/4.0);
+        tvHasil.setText(hasil +"");
+    }
+    public void rToF () {
+        double suhu = Double.parseDouble(etNilai.getText().toString());
+        double hasil =(suhu * 9.0/4.0 + 32);
+        tvHasil.setText(hasil +"");
+    }
+
+    public void cToQ(){
         Toast.makeText(this, "Belum Dibuat", Toast.LENGTH_SHORT).show();
     }
 }
