@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         al.setTitle("PERINGATAN !");
         al.setMessage("YAKIN AKAN MENGHAPUS");
         al.setPositiveButton("YA", new DialogInterface.OnClickListener() {
+
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 String sql = "DELETE FROM tblbarang WHERE idbarang = "+idbarang+";";
