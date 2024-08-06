@@ -5,9 +5,6 @@ import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     SiswaAdapter adapter;
-    List<Siswa> siswaList;
+    List<Siswa> SiswaList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,28 +31,28 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
     public void isiData(){
-        siswaList = new ArrayList<Siswa>();
-        siswaList.add(new Siswa("Rusdi","Ngawi"));
-        siswaList.add(new Siswa("Andre","Ngawi"));
-        siswaList.add(new Siswa("Rudi","Ngawi"));
-        siswaList.add(new Siswa("Rusi","Ngawi"));
-        siswaList.add(new Siswa("Rara","Ngawi"));
-        siswaList.add(new Siswa("Roman","Ngawi"));
-        siswaList.add(new Siswa("Bintang","Ngawi"));
-        siswaList.add(new Siswa("Arka","Ngawi"));
-        siswaList.add(new Siswa("Erpan","Ngawi"));
-        siswaList.add(new Siswa("Rere","Ngawi"));
-        siswaList.add(new Siswa("Dafa","Ngawi"));
-        siswaList.add(new Siswa("Onel","Ngawi"));
-        siswaList.add(new Siswa("Budi","Ngawi"));
-        siswaList.add(new Siswa("Riski","Ngawi"));
+        SiswaList = new ArrayList<Siswa>();
+        SiswaList.add(new Siswa("Rusdi","Ngawi"));
+        SiswaList.add(new Siswa("Andre","Ngawi"));
+        SiswaList.add(new Siswa("Rudi","Ngawi"));
+        SiswaList.add(new Siswa("Rusi","Ngawi"));
+        SiswaList.add(new Siswa("Rara","Ngawi"));
+        SiswaList.add(new Siswa("Roman","Ngawi"));
+        SiswaList.add(new Siswa("Bintang","Ngawi"));
+        SiswaList.add(new Siswa("Arka","Ngawi"));
+        SiswaList.add(new Siswa("Erpan","Ngawi"));
+        SiswaList.add(new Siswa("Rere","Ngawi"));
+        SiswaList.add(new Siswa("Dafa","Ngawi"));
+        SiswaList.add(new Siswa("Onel","Ngawi"));
+        SiswaList.add(new Siswa("Budi","Ngawi"));
+        SiswaList.add(new Siswa("Riski","Ngawi"));
 
-        adapter = new SiswaAdapter(this,siswaList);
+        adapter = new SiswaAdapter(this, SiswaList);
         recyclerView.setAdapter(adapter);
     }
 
     public void btnTambah(View view) {
-        siswaList.add(new Siswa("RUSDI NGAWI","SOLO"));
+        SiswaList.add(new Siswa("RUSDI NGAWI","SOLO"));
         adapter.notifyDataSetChanged();
     }
 }
