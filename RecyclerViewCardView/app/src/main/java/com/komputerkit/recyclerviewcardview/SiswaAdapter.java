@@ -1,5 +1,6 @@
 package com.komputerkit.recyclerviewcardview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -32,7 +33,7 @@ public class SiswaAdapter extends  RecyclerView.Adapter<SiswaAdapter.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder,final int i) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         final Siswa siswa = siswaList.get(i);
         viewHolder.tvNama.setText(siswa.getNama());
         viewHolder.tvAlamat.setText(siswa.getAlamat());
