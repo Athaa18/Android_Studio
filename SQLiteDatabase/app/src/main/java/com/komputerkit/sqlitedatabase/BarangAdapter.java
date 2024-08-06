@@ -1,5 +1,6 @@
 package com.komputerkit.sqlitedatabase;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -32,7 +33,7 @@ public class BarangAdapter extends  RecyclerView.Adapter<BarangAdapter.ViewHolde
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") int i) {
         viewHolder.tvBarang.setText(barangList.get(i).getBarang());
         viewHolder.tvStok.setText(barangList.get(i).getStok());
         viewHolder.tvHarga.setText(barangList.get(i).getHarga());
@@ -49,7 +50,7 @@ public class BarangAdapter extends  RecyclerView.Adapter<BarangAdapter.ViewHolde
                             if (Item.getItemId() == R.id.ubah){
                                 Toast.makeText(context, "UBAH", Toast.LENGTH_SHORT).show();
                             } else if (Item.getItemId() == R.id.hapus) {
-                                Toast.makeText(context, "HAPUS", Toast.LENGTH_SHORT).show();
+                                ((MainActivity)context).deleteData(barangList.get(i).getIdbarang());
                             }
 
 
